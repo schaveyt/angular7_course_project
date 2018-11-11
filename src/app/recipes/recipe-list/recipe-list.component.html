@@ -1,1 +1,26 @@
-<app-recipe-item></app-recipe-item>
+<div id="recipe-list" style="background-color: rgb(93, 189, 189)">
+  <div class="row">
+    <div class="col-xs-12 mb-3">
+      <a name="btnNewRecipe" id="btnNewRecipe" class="btn btn-primary" href="#" role="button">New Recipe</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="card-group">
+        <div *ngFor="let recipe of recipes">
+          <div class="card mb-3" style="width: 18rem;">
+            <img class="card-img-top" [src]="recipe.imagePath">
+            <div class="card-body">
+              <h4 class="card-title">{{recipe.name}}</h4>
+              <p class="card-text">{{recipe.description}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!--<app-recipe-item></app-recipe-item>-->
+    </div>
+  </div>
+
+</div>
