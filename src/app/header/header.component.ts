@@ -1,9 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
-enum Pages {
-  Recipes,
-  ShoppintList,
-}
 
 @Component({
   selector: 'app-header',
@@ -12,24 +8,18 @@ enum Pages {
 })
 export class HeaderComponent implements OnInit {
 
-  activePage = 0;
-
-  @Output() activePageChanged = new EventEmitter<number>();
+  @Output() pageSelected = new EventEmitter<string>();
+  pageSelectedName: string;
 
   constructor() { }
 
   ngOnInit() {
-    this.activePageChanged.emit(this.activePage);
+    this.onSelectPage('recipe');
   }
 
-  onShowRecipes() {
-    this.activePage = 0;
-    this.activePageChanged.emit(this.activePage);
-  }
-
-  onShowShoppingList() {
-    this.activePage = 1;
-    this.activePageChanged.emit(this.activePage);
+  onSelectPage(pageName: string) {
+    this.pageSelectedName = pageName;
+    this.pageSelected.emit(pageName);
   }
 
 }

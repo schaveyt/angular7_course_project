@@ -9,11 +9,11 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
 
-        <li [ngClass]="{'nav-item': true, 'active': activePage === 0}">
-          <a class="nav-link" href="#" (click)="onShowRecipes()">Recipes <span class="sr-only" *ngIf="activePage === 0">(current)</span></a>
+        <li [ngClass]="{'nav-item': true, 'active': pageSelectedName === 'recipe'}">
+          <a class="nav-link" href="#" (click)="onSelectPage('recipe')">Recipes <span class="sr-only" *ngIf="pageSelectedName === 'recipe'">(current)</span></a>
         </li>
-        <li [ngClass]="{'nav-item': true, 'active': activePage === 1}">
-          <a class="nav-link" href="#" (click)="onShowShoppingList()">Shopping List <span class="sr-only" *ngIf="activePage === 1">(current)</span></a>
+        <li [ngClass]="{'nav-item': true, 'active': pageSelectedName !== 'recipe'}">
+          <a class="nav-link" href="#" (click)="onSelectPage('shopping-list')">Shopping List <span class="sr-only" *ngIf="pageSelectedName !== 'recipe'">(current)</span></a>
         </li>
 
         <li class="nav-item dropdown">

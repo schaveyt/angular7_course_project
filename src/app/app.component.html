@@ -1,14 +1,10 @@
-<app-header (activePageChanged)="onActivePageChanged($event)"></app-header>
+<app-header (pageSelected)="onPageSelected($event)"></app-header>
 <main role="main">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-          <ng-container *ngIf="activePage === 0; else elseTemplate">
-              <app-recipes></app-recipes>
-            </ng-container>
-            <ng-template #elseTemplate>
-                <app-shopping-list></app-shopping-list>
-            </ng-template>
+        <app-recipes *ngIf="pageSelected === 'recipe'"></app-recipes>
+        <app-shopping-list *ngIf="pageSelected !== 'recipe'"></app-shopping-list>
       </div>
     </div>
   </div>
