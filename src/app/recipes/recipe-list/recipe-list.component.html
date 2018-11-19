@@ -7,8 +7,8 @@
   <div class="row">
     <div class="col-sm">
       <ul class="list-group">
-        <li *ngFor="let recipe of recipes" href="#" class="list-group-item list-group-item-action">
-          <app-recipe-item [recipe]="recipe"></app-recipe-item>
+        <li *ngFor="let recipeItem of recipes" href="#" class="list-group-item list-group-item-action">
+          <app-recipe-item [recipe]="recipeItem"></app-recipe-item>
         </li>
       </ul>
       <!--<app-recipe-item></app-recipe-item>-->
