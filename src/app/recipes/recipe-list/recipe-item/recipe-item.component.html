@@ -1,7 +1,7 @@
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" [src]="">
-  <div class="card-body">
-    <h4 class="card-title">Recipe Name</h4>
-    <p class="card-text">Description akd sakldkaf dfmaofaodmfoaidfoa fa fsdafljl dfd </p>
+<div class="d-flex justify-content-between">
+  <div>
+    <h5 class="mb-1">{{recipe.name}}</h5>
+    <p class="mb-1">{{recipe.description}}</p>
   </div>
+  <img class="img-fluid" [src]="recipe.imagePath" style="max-height: 50px;">
 </div>
