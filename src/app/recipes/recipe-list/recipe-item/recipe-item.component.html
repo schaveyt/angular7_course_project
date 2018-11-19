@@ -1,7 +1,9 @@
-<div class="d-flex justify-content-between">
-  <div>
-    <h5 class="mb-1">{{recipe.name}}</h5>
-    <p class="mb-1">{{recipe.description}}</p>
+<li href="#" class="list-group-item list-group-item-action">
+  <div class="d-flex justify-content-between">
+    <div>
+      <h5 class="mb-1">{{recipe.name}}</h5>
+      <p class="mb-1">{{recipe.description}}</p>
+    </div>
+    <img class="img-fluid" [src]="recipe.imagePath" style="max-height: 50px;">
   </div>
-  <img class="img-fluid" [src]="recipe.imagePath" style="max-height: 50px;">
-</div>
+</li>
