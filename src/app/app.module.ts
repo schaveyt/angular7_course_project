@@ -10,6 +10,7 @@ import { RecipesComponent } from './components/recipes/recipes.component';
 import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './components/recipe-item/recipe-item.component';
 import { RecipeDetailComponent } from './components/recipe-detail/recipe-detail.component';
+import { Boostrap4DropdownDirective } from './directives/dropdown.directive';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { RecipeDetailComponent } from './components/recipe-detail/recipe-detail.
     RecipeListComponent,
     RecipeItemComponent,
     RecipeDetailComponent,
-    RecipesComponent
+    RecipesComponent,
+    Boostrap4DropdownDirective
   ],
   imports: [
     BrowserModule
