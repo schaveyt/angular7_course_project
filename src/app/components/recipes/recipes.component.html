@@ -1,0 +1,16 @@
+<div id="recipes debug-layout">
+  <div class="row">
+    <div class="col-md debug-layout">
+      <app-recipe-list (recipeSelected)="onRecipeSelected($event)"></app-recipe-list>
+    </div>
+    <div class="col-md debug-layout">
+      <app-recipe-detail [recipe]="selectedRecipe" *ngIf="selectedRecipe; else recipeNotSelected"></app-recipe-detail>
+      <ng-template #recipeNotSelected>
+        <div class="jumbotron mt-3">
+          <h1 class="display-4">Recipe Details</h1>
+          <p class="lead">Select a recipe and see its details here.</p>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

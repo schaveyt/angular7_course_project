@@ -1,15 +1,15 @@
-<div class="row">
-  <div class="col-sm crop">
-    <img class="img-fluid" alt="" style="max-width: 500px;" src="" >
+<div class="row debug-layout">
+  <div class="col-sm text-center p-3">
+    <img class="img-fluid mx-auto" alt="" style="max-width: 500px; max-height: 300px;" src="{{ recipe.imagePath }}">
   </div>
 </div>
-<div class="row">
-  <div class="col-sm">
-    <h1>Recipe Name</h1>
+<div class="row debug-layout">
+  <div class="col">
+    <h1>{{ recipe.name }}</h1>
   </div>
 </div>
-<div class="row">
-  <div class="col-sm">
+<div class="row debug-layout">
+  <div class="col debug-layout">
     <div class="btn-group" role="group">
       <button id="dropdownId" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
@@ -23,13 +23,13 @@
     </div>
   </div>
 </div>
-<div class="row">
-    <div class="col-sm">
-      Recipe Description
-    </div>
+<div class="row debug-layout">
+  <div class="col">
+    {{ recipe.description }}
   </div>
-  <div class="row">
-      <div class="col-sm">
-        Recipe Ingredients
-      </div>
-    </div>
+</div>
+<div class="row debug-layout">
+  <div class="col">
+    Recipe Ingredients
+  </div>
+</div>
