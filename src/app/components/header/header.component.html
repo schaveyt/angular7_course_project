@@ -1,25 +1,23 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">Recipe Book</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" appBs4NavbarToggleHelper>
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <div class="navbar-collapse collapse">
       <ul class="navbar-nav mr-auto">
 
         <li [ngClass]="{'nav-item': true, 'active': pageSelectedName === 'recipe'}">
-          <a class="nav-link" href="#" (click)="onSelectPage('recipe')">Recipes <span class="sr-only" *ngIf="pageSelectedName === 'recipe'">(current)</span></a>
+          <a class="nav-link" href="#" (click)="onSelectPage('recipe')">Recipes</a>
         </li>
         <li [ngClass]="{'nav-item': true, 'active': pageSelectedName !== 'recipe'}">
-          <a class="nav-link" href="#" (click)="onSelectPage('shopping-list')">Shopping List <span class="sr-only" *ngIf="pageSelectedName !== 'recipe'">(current)</span></a>
+          <a class="nav-link" href="#" (click)="onSelectPage('shopping-list')">Shopping List</a>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Manage</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown01">
+        <li class="nav-item dropdown" appBs4DropdownHelper>
+          <a class="nav-link dropdown-toggle" href="#">Manage</a>
+          <div class="dropdown-menu" >
             <a class="dropdown-item" href="#">Save Data</a>
             <a class="dropdown-item" href="#">Fetch Data</a>
           </div>

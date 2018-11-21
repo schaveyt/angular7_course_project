@@ -10,7 +10,9 @@ import { RecipesComponent } from './components/recipes/recipes.component';
 import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './components/recipe-item/recipe-item.component';
 import { RecipeDetailComponent } from './components/recipe-detail/recipe-detail.component';
-import { Boostrap4DropdownDirective } from './directives/dropdown.directive';
+import { Bs4DropdownHelperDirective } from './directives/bootstrap4/dropdown-helper.directive';
+import { Bs4NavbarToggleHelperDirective } from './directives/bootstrap4/navbar-toggler-helper.directive';
+
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { Boostrap4DropdownDirective } from './directives/dropdown.directive';
     RecipeItemComponent,
     RecipeDetailComponent,
     RecipesComponent,
-    Boostrap4DropdownDirective
+    Bs4DropdownHelperDirective,
+    Bs4NavbarToggleHelperDirective
   ],
   imports: [
     BrowserModule
