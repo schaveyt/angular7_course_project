@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Ingredient } from '../models/ingredient.model';
+import { Ingredient } from './ingredient.model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +25,5 @@ export class ShoppingListService {
   public addIngredient(v: Ingredient) {
     this._ingredients.push(v);
   }
-
 
 }

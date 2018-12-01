@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild, Output, EventEmitter } from '@angular/core';
-import { Ingredient } from 'src/app/models/ingredient.model';
+import { Ingredient } from 'src/app/shopping-lists/ingredient.model';
 
 @Component({
   selector: 'app-shopping-list-editor',
