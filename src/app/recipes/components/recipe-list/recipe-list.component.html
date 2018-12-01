@@ -8,8 +8,7 @@
     <div class="col">
       <ul class="list-group">
           <app-recipe-item *ngFor="let recipeItem of recipeSvc.recipes"
-            [recipe]="recipeItem"
-            (click)="onRecipeItemSelected(recipeItem)">
+            [recipe]="recipeItem">
           </app-recipe-item>
       </ul>
     </div>
