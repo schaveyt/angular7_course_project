@@ -14,7 +14,7 @@ export class RecipesComponent implements OnInit {
 
   ngOnInit() {
     this.recipeSvc.recipeSelected.subscribe((recipe: Recipe) => {
-        this.selectedRecipe = recipe;
+      this.onRecipeSelected(recipe);
       }
     );
   }
