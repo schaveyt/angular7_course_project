@@ -16,7 +16,7 @@ export class ShoppingListComponent implements OnInit {
   }
 
   onAddIngredient(i: Ingredient) {
-    this.shoppingListSvc.ingredients.push(i);
+    this.shoppingListSvc.addIngredient(i);
   }
 
 }
